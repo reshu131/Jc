@@ -5,7 +5,7 @@ ARG uid=1000
 ARG gid=1000
 
 RUN groupadd  ${group} \
-    && useradd -G ${group} -s /bin/bash  ${user}
+    && useradd -g ${group} -s /bin/bash  ${user}
 
 USER ${user}
 
