@@ -4,8 +4,8 @@ ARG group=ris
 ARG uid=1000
 ARG gid=1000
 
-RUN addgroup -g ${gid} ${group} \
-    && adduser -u {uid} -G ${group} -s /bin/bash -D {user}
+RUN groupadd -g ${gid} ${group} \
+    && useradd -u {uid} -G ${group} -s /bin/bash -D {user}
 
 USER ${user}
 
